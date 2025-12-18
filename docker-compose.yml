@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  game:
+    build: .
+    container_name: ia-jogos
+    environment:
+      - DISPLAY=${DISPLAY:-:0}
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - .:/app
+    network_mode: host
+    stdin_open: true
+    tty: true
+  
+  game-headless:
+    build:
+      context: .
+      dockerfile: Dockerfile.headless
+    container_name: ia-jogos-headless
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - .:/app
+    stdin_open: true
+    tty: true
+
