@@ -5,7 +5,7 @@
 **Neural Pursuit** is a survival game where NPCs (Non-Player Characters) use Artificial Intelligence techniques to navigate and interact with the environment. The implemented techniques include:
 
 - **Finite State Machine (FSM)**: To manage complex NPC behaviors
-- **Pathfinding (A*)**: For intelligent navigation in environments with obstacles
+- __Pathfinding (A*)__: For intelligent navigation in environments with obstacles
 
 ## Installation
 
